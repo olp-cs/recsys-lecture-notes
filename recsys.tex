@@ -9,6 +9,7 @@
 \usepackage{geometry}		% to change the page dimensions
 \geometry{a4paper}		% or letterpaper (US) or a5paper or....
 \usepackage[parfill]{parskip} 	% begin paragraphs with an empty line rather than an indent
+\usepackage{amstext}
 
 
 \begin{document}
@@ -30,12 +31,24 @@
 
 
 
-\section{First section}
+\section{Basic product association recommenders ~$^{Video~2.1}$}
 
-Your text goes here.
+Which product to buy with a product $X$? 
+We consider \emph{non-personalized} recommendations,
+which are the same for every user looking at a particular product.
 
-\subsection{A subsection}
+\subsection{Looking for things that co-occur}
 
-More text.
+We know that a person bought $X$. Which product $Y$ to recommend?
+
+\textbf{The simplest way to compute the ranking of a product $Y$:}
+
+
+$\text{percentage of $X$-buyers who also bought $Y$ : }\frac{\text{people who bought both $X$ and $Y$}}{\text{people who bought $X$}}$
+
+\textbf{When it doesn't work}: in a supermarket, almost everyone buys bananas---that doesn't mean that we should recommend buying bananas to accompany every product.
+
+\subsection{Looking where opinions diverge from the community average}
+
 
 \end{document}

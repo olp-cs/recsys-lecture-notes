@@ -10,6 +10,8 @@
 \geometry{a4paper}		% or letterpaper (US) or a5paper or....
 \usepackage[parfill]{parskip} 	% begin paragraphs with an empty line rather than an indent
 \usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{xfrac}
 
 
 \begin{document}
@@ -44,12 +46,21 @@ We know that a person bought $X$. Which product $Y$ to recommend?
 The simplest way to compute the ranking of a product $Y$:
 
 $\text{percentage of $X$-buyers who also bought $Y$ : }
-\frac{\text{people who bought both $X$ and $Y$}}
+\dfrac{\text{people who bought both $X$ and $Y$}}
 {\text{people who bought $X$}}$
 
 \emph{When it doesn't work}: in a supermarket, almost everyone buys bananas---that doesn't mean that we should recommend buying bananas to accompany every product.
 
 \subsection{Looking where opinions diverge from the community average}
 
+We know that a person bought $X$. Which product $Y$ to recommend?
+
+Let $!X$ be the case when the user did not buy the product $X$. Let's look whether $X$ makes appearance of $Y$ to be more likely than in the case of $!X$.
+
+Ranking of a product $Y$:  
+$\dfrac{\dfrac{X\text{ and }Y}{X}}
+{\dfrac{!X\text{ and }Y}{!X}}$ 
+
+This excludes bestsellers from our recommendations.
 
 \end{document}

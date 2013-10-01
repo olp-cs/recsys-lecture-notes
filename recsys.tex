@@ -41,12 +41,13 @@ which are the same for every user looking at a particular product.
 
 We know that a person bought $X$. Which product $Y$ to recommend?
 
-\textbf{The simplest way to compute the ranking of a product $Y$:}
+The simplest way to compute the ranking of a product $Y$:
 
+$\text{percentage of $X$-buyers who also bought $Y$ : }
+\frac{\text{people who bought both $X$ and $Y$}}
+{\text{people who bought $X$}}$
 
-$\text{percentage of $X$-buyers who also bought $Y$ : }\frac{\text{people who bought both $X$ and $Y$}}{\text{people who bought $X$}}$
-
-\textbf{When it doesn't work}: in a supermarket, almost everyone buys bananas---that doesn't mean that we should recommend buying bananas to accompany every product.
+\emph{When it doesn't work}: in a supermarket, almost everyone buys bananas---that doesn't mean that we should recommend buying bananas to accompany every product.
 
 \subsection{Looking where opinions diverge from the community average}
 
